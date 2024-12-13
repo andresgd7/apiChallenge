@@ -229,16 +229,9 @@
                         <p><strong>Release Date:</strong> ${result.release_date || 'N/A'}</p>
                         <p><strong>Genres:</strong> ${Array.isArray(result.genres) ? result.genres.join(', ') : 'No genres available'}</p>
                         ${result.weather ? `
-                            <p><strong>Apparent Temperature:</strong> 
+                            <p><strong>Apparent Temperature in Medellín in realease date:</strong> 
                                 Min ${result.weather.apparent_temperature_min}°C, 
                                 Max ${result.weather.apparent_temperature_max}°C
-                            </p>
-                        ` : ''}
-                        ${result.webhook_status ? `
-                            <p class="webhook-status" style="font-size: 12px; color: ${result.webhook_status.success ? '#28a745' : '#dc3545'}">
-                                ${result.webhook_status.success ? 
-                                    '✓ Data successfully sent to webhook' : 
-                                    '✗ Error sending data to webhook'}
                             </p>
                         ` : ''}
                     </div>
